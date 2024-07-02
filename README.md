@@ -26,6 +26,25 @@ Replace <host> with the hostname or IP address of the target server.
 - Script is designed to work on Debian-based distros and on the latest postgresql version (usage of `apt` and the hardcoded path to the .conf file).
     - It is possible to adapt the solution to check both for an existing package manager by checking the distro first (debian/SuSE/redhat/gentoo/alpine/arch/..) in the folder `/etc/os-release
 
+
+## Feedback from the company-interviewer:
+
+```
+В целом обратная связь по заданию
+"Установка на Debian 12 не сработала из-за хардкода версии postgres в скрипте
+ (в Debian 12 - postgres 15). После правки скрипта postgres установился, но не прошла проверка
+ доступности из-за некорректной правки pg_hba.conf.
+
+Плюсы:
+* Хороший код
+* Самая продуманная обработка ошибок Paramiko
+* В readme описаны некоторые ограничения и мысли по реализации.
+Минусы:
+* Нет файла requirements.txt
+* Программа не выдаёт статус выполнения инсталляции
+* Программа ожидает лишних команд при запуске (это не соответствует исходному заданию)"
+```
+
 ## Author
 
 Tkachenko Nikita\
