@@ -24,7 +24,7 @@ Replace <host> with the hostname or IP address of the target server.
     - You **cannot** simply use `sudo su - username` in an `exec_command` before the command that needs root access, because each call to `exec_command` runs in its own subshell, as such the changes will not propagate back to the main session.
     - I tried to overcome this issue by writing a simple function-wrapper around `exec_command`, which (along side proper exceptions handling) checks if the command requires sudo perms, and if it does, handles admin password input if needed.
 - Script is designed to work on Debian-based distros and on the latest postgresql version (usage of `apt` and the hardcoded path to the .conf file).
-    - It is possible to adapt the solution to check both for an existing package manager by checking the distro first (debian/SuSE/redhat/gentoo/alpine/arch/..) in the folder `/etc/os-release
+    - It is possible to adapt the solution to check both for an existing package manager by checking the distro first (`debian/SuSE/redhat/gentoo/alpine/arch/..`) in the folder `/etc/os-release`
 
 
 ## Feedback from the company-interviewer:
